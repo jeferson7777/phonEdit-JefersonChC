@@ -1,7 +1,7 @@
 #Pseudo code
 
-- [ ] Establecer `yarn scripts` para inicialización del servidor
-- [ ] Instalar las siguientes dependencias:
+- [x] Establecer `yarn scripts` para inicialización del servidor
+- [xgst] Instalar las siguientes dependencias:
   - Express
   - Body parser
   - Nodemon
