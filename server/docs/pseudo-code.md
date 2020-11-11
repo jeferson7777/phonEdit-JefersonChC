@@ -1,14 +1,14 @@
 #Pseudo code
 
 - [x] Establecer `yarn scripts` para inicialización del servidor
-- [xgst] Instalar las siguientes dependencias:
+- [x] Instalar las siguientes dependencias:
   - Express
   - Body parser
   - Nodemon
   - Winston
   - Dotenv
   - Node fetch
-- [ ] Crear un archivo `index.js`.
+- [x] Crear un archivo `index.js`.
 - [ ] Crear un servidor usando express en el archivo `index.js`, partiendo de la base del scraper que conseguimos en GitHub: https://github.com/karnadii/gsmarena-scraper-json.
 - [ ] Crear un archivo llamado scraper.js, donde usaremos la base del scraper y exportaremos el scraper.
 - [ ] Crear una carpeta llamada `lib`
