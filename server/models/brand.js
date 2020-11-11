@@ -28,3 +28,36 @@ export const getAllBrands = async () => {
     throw new Error(error);
   }
 };
+
+export const getABrand = async (query) => {
+  try {
+    const response = await fetch(`${BASE_URL}/${query}`);
+    const html = await response.text();
+    const $ = cheerio.load(html);
+    const json = [];
+
+    // Get all list phone
+    const phones = $('.makers').find('li');
+    phones.each((i, el) => {
+      const phone = {
+        name: $(el).find('span').text(),
+        img: $(el).find('img').attr('src'),
+        url: $(el).find('a').attr('href'),
+        description: $(el).find('img').attr('title'),
+      };
+      json.push(phone);
+    });
+
+    // get next and prev page link
+    const nextPage = $('a.pages-next').attr('href');
+    const prevPage = $('a.pages-prev').attr('href');
+
+    return {
+      data: json,
+      next: nextPage,
+      prev: prevPage,
+    };
+  } catch (error) {
+    throw new Error(error);
+  }
+};
