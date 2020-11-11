@@ -12,16 +12,13 @@ import httpLoggerMiddleware from './middleware/logger-middleware.js';
 import jsonResponseMiddleware from './middleware/json-response.js';
 import errorHandlerMiddleware from './middleware/error-handler.js';
 
-
-import albumsRouter from './routes/albums-routes.js';
-import playlistRouter from './routes/playlist-routes.js';
-
-
+import brandsRouter from './routes/brands-routes.js';
+import phoneRouter from './routes/phone-routes.js';
 
 const HOST = '127.0.0.1';
 const PORT = 5000;
-export const databaseURI = process.env.databaseURI || 'mongodb://localhost/metallica-MERN';
-// const databaseURI = 'mongodb://localhost:2700/mongoose-intro
+export const databaseURI =
+  process.env.databaseURI || 'mongodb://localhost/metallica-MERN';
 
 // Creacion del servidor
 const server = express();
@@ -41,8 +38,8 @@ server.use(httpLoggerMiddleware);
 server.use(jsonResponseMiddleware);
 
 // Enrutar servidores
-server.use(albumsRouter);
-server.use(playlistRouter);
+server.use(brandsRouter);
+server.use(phoneRouter);
 
 // Sino no hay rutas definidas envia error al cliente
 server.use(errorHandlerMiddleware);
