@@ -2,6 +2,11 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import logger from './lib/logger.js';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+
+const databaseURI = 'mongodb://localhost/phone-edit';
+mongoose.connect(databaseURI);
 
 // middlewares
 import jsonParserMiddleware from './middleware/json-parse-middleware.js';
