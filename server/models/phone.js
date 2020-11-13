@@ -132,7 +132,7 @@ export const getPhonesBySearchQuery = async (query) => {
 //   return json;
 // };
 
-export const getPhonesDetails = async (id) => {
+export const getPhoneDetails = async (id) => {
   const response = await fetch(`${BASE_URL}/${id}`);
   const html = await response.text();
 
