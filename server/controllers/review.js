@@ -6,6 +6,7 @@ import {
   updateReviewResource,
 } from '../models/review.js';
 // From the URL GET /albgetAllAlbums
+
 export const listgetAllReview = async (request, response, next) => {
   try {
     const getAllReviewList = await getAllReviews();

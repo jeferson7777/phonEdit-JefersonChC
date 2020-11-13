@@ -196,9 +196,9 @@ export const getPhonesDetails = async (id) => {
     quick_spec: quick_spec,
   };
 
-   return {
-     data: json
+  return data;
+     
     
-   };
+  
 };
 
