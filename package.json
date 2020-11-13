@@ -1,11 +1,12 @@
 {
-  "name": "phonEdit",
+  "name": "phonedit",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:ArielisGT/phonEdit.git",
   "author": "Arielis <aetumasonis@gmail.com>",
   "license": "MIT",
   "private": true,
+  "type": "module",
   "devDependencies": {
     "lerna": "^3.22.1"
   },
@@ -14,6 +15,7 @@
     "client"
   ],
   "scripts": {
-    "start": "yarn workspace server start"
+    "start": "yarn workspace server start",
+    "client": "yarn workspace client start "
   }
 }

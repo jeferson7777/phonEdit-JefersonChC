@@ -1,7 +1,7 @@
 import {
   getPhoneById,
   getPhonesBySearchQuery,
-  getPhonesDetails
+  getPhoneDetails
 } from '../models/phone.js';
 
 
@@ -39,7 +39,7 @@ export const listPhoneDetails = async (request, response) => {
   } = request;
 
   try {
-    const phones = await getPhonesDetails(id);
+    const phones = await getPhoneDetails(id);
     return response.status(200).send(phones);
   } catch (error) {
     const { message } = error;
