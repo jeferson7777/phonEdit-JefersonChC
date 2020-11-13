@@ -1,3 +1,0 @@
-phones = []
-
-export default phones;

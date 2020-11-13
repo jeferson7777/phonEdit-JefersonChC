@@ -1,3 +1,0 @@
-brands = [];
-
-export default brands;
