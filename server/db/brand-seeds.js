@@ -1,7 +1,7 @@
 
 import mongoose from 'mongoose';
 import { databaseURI } from '../index.js';
-import brand from '../controllers/brand.js';
+import brands from './brands.js';
 import Brands, { getAllBrands } from '../models/brand.js';
 
 mongoose.connect(databaseURI, {

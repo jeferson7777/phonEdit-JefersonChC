@@ -5,7 +5,7 @@ import logger from './lib/logger.js';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
-const databaseURI = 'mongodb://localhost/phone-edit';
+export const databaseURI = 'mongodb://localhost/phone-edit';
 mongoose.connect(databaseURI);
 
 // middlewares
