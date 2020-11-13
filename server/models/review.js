@@ -4,23 +4,26 @@ import mongoose from 'mongoose';
 const reviewSchema = new mongoose.Schema(
   {
     brand: String,
-    phone: String,
-    title: String,
-    user: String,
-    text: [
-      {
-        description: String,
-        image: [Boolean],
-      },
-    ],
-    puntuation: Number,
+    phoneModel: String,
+    reviewTitle: String,
+    userName: String,
+    description: String,
+    pictures: [],
+    usabilityScore: Number,
+    designScore: Number,
+    durabilityScore: Number,
+    pros: String,
+    cons: String,
+    summary: String
   },
   {
     timestamps: true,
   },
 );
-const review = mongoose.model('review ', reviewSchema);
-export default review;
+const Review = mongoose.model('review ', reviewSchema);
+export default Review;
+
+
 export const getAllReviews = async () => {
   try {
     return await review.find();

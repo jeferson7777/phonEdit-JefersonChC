@@ -4,14 +4,12 @@ import cheerio from 'cheerio';
 
 const BASE_URL = 'https://www.gsmarena.com';
 
-const phoneSchema = new mongoose.Schema(
-  {
+const phoneSchema = new mongoose.Schema({
   name: String,
   img: String,
   spec_detail: String,
   quick_spec: String,
-  }
-);
+});
 
 export default mongoose.model('phone', phoneSchema);
 
@@ -188,17 +186,11 @@ export const getPhonesDetails = async (id) => {
 
   // get next and prev page link
 
-  data = {
+  return {
     title: title,
     img: img,
     img_url: img_url,
     spec_detail: spec_detail,
     quick_spec: quick_spec,
   };
-
-   return {
-     data: json
-    
-   };
 };
-

@@ -1,4 +1,3 @@
-
 import mongoose from 'mongoose';
 import { databaseURI } from '../index.js';
 import brands from './brands.js';
@@ -8,6 +7,7 @@ mongoose.connect(databaseURI, {
   useFindAndModify: false,
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useNewUrlParser: true,
 });
 
 Promise.all(

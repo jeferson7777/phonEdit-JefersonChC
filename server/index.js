@@ -6,7 +6,12 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
 export const databaseURI = 'mongodb://localhost/phone-edit';
-mongoose.connect(databaseURI);
+mongoose.connect(databaseURI, {
+  useFindAndModify: false,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+});
 
 // middlewares
 import jsonParserMiddleware from './middleware/json-parse-middleware.js';
