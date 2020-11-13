@@ -8,13 +8,14 @@ const BASE_URL = 'https://www.gsmarena.com';
 const brandSchema = new mongoose.Schema(
   {
     name: String,
-    img: String,
+    devices: String,
   },
 
 
 );
 
-export default mongoose.model('brand', brandSchema);
+const Brands = mongoose.model('brand', brandSchema);
+export default Brands;
 
 export const getAllBrands = async () => {
   try {

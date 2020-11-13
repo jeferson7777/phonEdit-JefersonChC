@@ -17,6 +17,7 @@
   },
   "scripts": {
     "dev": "yarn nodemon ./index.js",
-    "start": "node ./index.js"
+    "start": "node ./index.js",
+    "seedBrands": "node ./db/brand-seeds.js"
   }
 }

@@ -1,8 +1,8 @@
 
 import mongoose from 'mongoose';
 import { databaseURI } from '../index.js';
-import brand from './brand.js';
-import brandSchema, { getAllBrands } from '../models/albums.js';
+import brand from '../controllers/brand.js';
+import Brands, { getAllBrands } from '../models/brand.js';
 
 mongoose.connect(databaseURI, {
   useFindAndModify: false,
@@ -12,9 +12,9 @@ mongoose.connect(databaseURI, {
 
 Promise.all(
   brands.map(async (brand) => {
-    const albumResource = await Albums.create({ ...album });
+    const brandResource = await Brands.create({ ...brand });
     console.log(
-      `The resource ${JSON.stringify(albumResource)} has been created`,
+      `The resource ${JSON.stringify(brandResource)} has been created`,
     );
   }),
 );
