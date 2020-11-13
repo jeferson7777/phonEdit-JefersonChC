@@ -1,4 +1,9 @@
-import { getPhoneById, getPhonesBySearchQuery } from '../models/phone.js';
+import {
+  getPhoneById,
+  getPhonesBySearchQuery,
+  getPhonesDetails
+} from '../models/phone.js';
+
 
 export const listPhoneById = async (request, response) => {
   const {
@@ -21,6 +26,20 @@ export const listSearchPhones = async (request, response) => {
 
   try {
     const phones = await getPhonesBySearchQuery(id);
+    return response.status(200).send(phones);
+  } catch (error) {
+    const { message } = error;
+    return response.status(500).send({ message });
+  }
+};
+
+export const listPhoneDetails = async (request, response) => {
+  const {
+    params: { id },
+  } = request;
+
+  try {
+    const phones = await getPhonesDetails(id);
     return response.status(200).send(phones);
   } catch (error) {
     const { message } = error;

@@ -1,4 +1,4 @@
-import { getAllBrands, getABrand } from '../models/brand.js';
+import { getAllBrands, getOneBrand } from '../models/brand.js';
 
 export const listAllBrands = async (request, response) => {
   try {
@@ -10,13 +10,13 @@ export const listAllBrands = async (request, response) => {
   }
 };
 
-export const listABrand = async (request, response) => {
+export const listOneBrand = async (request, response) => {
   const {
     params: { id },
   } = request;
 
   try {
-    const brand = await getABrand(id);
+    const brand = await getOneBrand(id);
     return response.status(200).send(brand);
   } catch (error) {
     const { message } = error;
