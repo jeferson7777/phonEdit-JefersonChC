@@ -7,6 +7,7 @@ mongoose.connect(databaseURI, {
   useFindAndModify: false,
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useNewUrlParser: true,
 });
 
 Promise.all(
