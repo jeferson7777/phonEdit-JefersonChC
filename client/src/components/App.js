@@ -8,8 +8,8 @@ import Blog from '../pages/blog.js';
 import ErrorPage from '../pages/error.js';
 
 // UI components
-import Footer from './footer.js';
 import Header from '../components/header.js';
+import Footer from '../components/footer.js';
 
 function App() {
   return (
@@ -17,8 +17,8 @@ function App() {
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route exact path="/brand" component={Brand} />
-          <Route path="/review" component={Review} />
+          <Route exact path="/" component={Brand} />
+          <Route path="/reviews" component={Review} />
           <Route path="/blog" component={Blog} />
           <Route path="/*" component={ErrorPage} />
         </Switch>

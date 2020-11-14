@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getAlbumsByIds } from '../lib/fetch-albums.js';
 import { useLocalStorage } from '../lib/local-storage-hook.js';
 
-  const Playlist = () => {
+  const Blog = () => {
   const [collection, _setCollection] = useLocalStorage('userCollection', []);
   const [albums, setAlbums] = useState([]);
 
@@ -22,8 +22,14 @@ import { useLocalStorage } from '../lib/local-storage-hook.js';
   }, []);
 
   return (
-    <main className="container-playlist">
-      <div className="left">
+    <main className="container-blog">
+    </main>
+  );
+};
+
+export default Blog;
+
+/*       <div className="left">
         <h3>USER:</h3>
         <h4>Username</h4>
       </div>
@@ -54,8 +60,4 @@ import { useLocalStorage } from '../lib/local-storage-hook.js';
           );
         })}
       </section>
-    </main>
-  );
-};
-
-export default Playlist;
+ */

@@ -1,47 +1,43 @@
 header {
-  width: 100vw;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  padding: 1rem;
-  padding-top: 2rem;;
-  //background-color: black;
+  margin: 0;
+  padding-top: 5vh;
   position: fixed;
-    h1  {
-    .logo {
-      margin: 0 auto;
-      width: 25vw;
-      position: fixed;
-      top: 2vh;
-      right: 35vw;
+    h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+    margin-left: 48vw;
+      span {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 1);
+        font-weight: bold;
+      }
     }
-  }
     nav {
       ul {
         display: flex;
-        flex-direction: row;
-        
-        li {
-          margin-right: 1rem;
-          list-style: none;
-          .links {
-            margin-right: 2rem;
-            color: orange;
-            text-decoration: none;
-            font-family: 'Oswald', sans-serif;
-            font-weight: normal;
-            background-color: black;
-             padding: 0.25rem 1rem;
-             border-radius: 0.5rem;
-            &:hover {
-              color: black;
-              background-color: orange;
-              padding: 0.25rem 1rem;
-              border-radius: 0.5rem;
-            }
-        }
-        }
+        justify-content: flex-end;
+        background-color: rgba(179, 179, 54, 0.7);
+        min-width: 20vw;
+        border-radius: 5px;
       }
+        li {
+          display: flex;
+          margin-left: 1vw;
+          .links {
+              color:rgba(255, 255, 255, 1);
+              padding: 0.5rem 1rem;
+              text-decoration: none;
+              font-family: 'Open Sans Condensed', sans-serif;
+              font-weight: bold;
+              font-size: 1.25rem;
+          }
+        }
     }
 }
 

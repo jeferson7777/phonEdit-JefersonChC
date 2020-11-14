@@ -1,11 +1,14 @@
 footer {
-  background-color: black;
-  color: white;
-  padding: 0.5rem;
-  p {
-    font-family: 'Oswald', sans-serif;
-    font-weight: normal;
-    text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 5vh;
+  background-color: rgba(128, 130, 133, 1);
+   p {
+    color:  rgba(0, 0, 49, 1);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
     font-size: 0.75rem;
+    margin-right: 2rem;
   }
 }

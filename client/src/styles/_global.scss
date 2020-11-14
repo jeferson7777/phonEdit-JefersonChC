@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@100;300;400;500;700&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:wght@300;400;600;700&family=Titillium+Web:wght@200;400;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -6,8 +6,8 @@
 
 body {
   font-size: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(255, 255, 255, 1);
 }
 img {
   display: block;

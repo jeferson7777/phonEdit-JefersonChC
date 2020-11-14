@@ -1,233 +1,92 @@
-.container-home{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 100vh;
-  color: white;
-  background-image: url('../assets/backgrounds/blue_flames2.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-      .left {
-            width: 15vw;
-            min-height: 10vh;
-            background-color: rgba(122, 120, 126, 0.3);
-            border-radius: 0.5rem;
-            padding: 0.25rem;
-            display: flex;
-            align-items: center;
-            h4 {
-              font-size: 1rem;
-              font-weight: normal;
-              text-align: center;
-              font-family: 'Oswald', sans-serif;
-            }
-      }
-      .wrapper-album {
+
+  .container-brand {
+    width: 100vw;
+    min-height: 95vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 auto;
+    background-image: url(../assets/backgrounds/back_violet.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .left{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 45vw;
+      height: 60vh;
+      background-color: rgba(179, 179, 54, 1);
+      border-radius: 0.3rem;
+      margin-left: 3vw;
+      .wrapper-one {
+        display: flex;
+        flex-direction: column;
+        min-width: 40vw;
+        min-height: 50vh;
+        margin: 0 auto;
+        border-radius: 0.3rem;
+        margin-top: 1.5rem;
+        article {
           display: flex;
           flex-direction: row;
-          justify-content: center;
+          justify-content: space-between;
           align-items: center;
-          flex-wrap: wrap;
-          max-width: 60vw;
-          min-height: 90vh;
-          background-color: rgba(32, 12, 73, 0.5);
-          border-radius: 0.5rem;
-          margin-top: 15vh;
-          .album {
-                max-width: 15vw;
-                min-height: 35vh;
-                display: flex;
-                flex-direction: column;
-                justify-content: baseline;
-                align-items: center;
-                padding: 1rem 1rem;
-                .favorite {
-                 background-color: transparent;
-                  color: rgba(255, 255, 255, 0.4);
-                  padding: 0.5rem;
-                  font-family: 'Oswald', sans-serif;
-                  font-weight: normal;
-                  border-radius: 0.5rem;
-                  border: 1px solid  rgba(255, 255, 255, 0.4);
-                  margin-bottom: 1rem;
-                  &:hover {
-                    color: rgba(255, 255, 255, 1);
-                    border: 1px solid  rgba(255, 255, 255, 1);
-                  }
-                  &:active {
-                    color: rgba(255, 255, 255, 1);
-                    border: 1px solid  rgba(255, 255, 255, 1);
-                    background-color: orange;
-                  }
-                }
-                  .kill-em-all {
-                    background-image: url('../assets/albums/killem_all.png');
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    min-width: 12vw;
-                    min-height: 12vw;
-                    padding: 0.25rem;
-                    border-radius: 0.5rem;
-                  }
-                  .ride-the-lightning {
-                    background-image: url('../assets/albums/ride_lightning.png');
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    min-width: 12vw;
-                    min-height: 12vw;
-                    padding: 0.25rem;
-                    border-radius: 0.5rem;
-                  }
-                  .master-of-puppets {
-                    background-image: url('../assets/albums/master.png');
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    min-width: 12vw;
-                    min-height: 12vw;
-                    padding: 0.25rem;
-                    border-radius: 0.5rem;
-                  }
-                    .and-justice-for-all {
-                    background-image: url('../assets/albums/justice_x_all.png');
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    min-width: 12vw;
-                    min-height: 12vw;
-                    padding: 0.25rem;
-                    border-radius: 0.5rem;
-                  }
-
-                  .metallica {
-                    background-image: url('../assets/albums/black.png');
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    min-width: 12vw;
-                    min-height: 12vw;
-                    padding: 0.25rem;
-                    border-radius: 0.5rem;
-                  }
-                  .load {
-                    background-image: url('../assets/albums/load.png');
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    min-width: 12vw;
-                    min-height: 12vw;
-                    padding: 0.25rem;
-                    border-radius: 0.5rem;
-                  }
-                  .reload {
-                    background-image: url('../assets/albums/reload.png');
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    min-width: 12vw;
-                    min-height: 12vw;
-                    padding: 0.25rem;
-                    border-radius: 0.5rem;
-                  }
-                  .garage-inc {
-                    background-image: url('../assets/albums/garage_inc.png');
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;min-width: 12vw;
-                    min-height: 12vw;
-                    padding: 0.25rem;
-                    border-radius: 0.5rem;
-                  }
-                  .s-and-m {
-                    background-image: url('../assets/albums/s&m.png');
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    min-width: 12vw;
-                    min-height: 12vw;
-                    padding: 0.25rem;
-                    border-radius: 0.5rem;
-                  }
-                  .st-anger {
-                    background-image: url('../assets/albums/st_anger.png');
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    min-width: 12vw;
-                    min-height: 12vw;
-                    padding: 0.25rem;
-                    border-radius: 0.5rem;
-                  }
-                  .death-magnetic {
-                    background-image: url('../assets/albums/death_magnetic.png');
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    min-width: 12vw;
-                    min-height: 12vw;
-                    padding: 0.25rem;
-                    border-radius: 0.5rem;
-                  }
-                  .hardwired {
-                    background-image: url('../assets/albums/hardwired.png');
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    min-width: 12vw;
-                    min-height: 12vw;
-                    padding: 0.25rem;
-                    border-radius: 0.5rem;
-                  }
-                  h4 {
-                      padding: 0;
-                      margin: 0;
-                      margin-top: 0.5rem;
-                      font-family: 'Oswald', sans-serif;
-                      font-weight: 300;
-                      
-                      }
+          min-width: 40vw;
+          max-height: 10vh;
+          background-color:rgba(209, 209, 134, 1);
+          margin: 0 auto;
+          border-radius: 0.3rem;
+          margin-top: 0.8rem;
+          h4{
+            color: rgba(128, 130, 133, 1);
+            font-family: 'Open Sans', sans-serif;
+            margin: 0 2rem;
+            padding: 0 0.5rem;
+            padding-top: 1rem;
+          }
+          p {
+            color:  rgba(0, 0, 49, 1);
+            font-family: 'Fira Sans Extra Condensed', sans-serif;
+            font-size: 0.80rem;
+            margin: 0 2rem;
+            padding: 0.5rem 0.5rem 1rem;
+          }
+          .logos {
+            max-width: 8vw;
+            padding: 1rem;
           }
         }
-      .right {
-                    width: 15vw;
-                    min-height: 10vh;
-                    background-color: rgba(122, 120, 126, 0.3);
-                    border-radius: 0.5rem;
-                    padding: 0.25rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    h4 {
-                      font-size: 1rem;
-                      text-align: center;
-                      font-family: 'Oswald', sans-serif;
-                      font-weight: normal;
-                    }
-                    .go {
-                      margin-left: 1rem;
-                      background-color: black;
-                      color: rgba(255, 255, 255, 0.5);
-                      border: 2px solid  rgba(255, 255, 255, 0.5);
-                      border-radius: 50%;
-                      min-width: 2rem;
-                      min-height: 2rem;
-                      text-align: center;
-                      vertical-align: sub;
-                      text-decoration: none;
-                      padding-top: 0.33rem;
-                      &:hover {
-                      color: rgba(255, 255, 255, 1);
-                      border: 2px solid  rgba(255, 255, 255, 1);
-                      }
-                      &:active {
-                      color: rgba(255, 255, 255, 1);
-                      border: 2px solid  rgba(255, 255, 255, 1);
-                      background-color: orange;
-                      }
-                    }
       }
-    }    
+    }
+    .right{
+      display: flex;
+      justify-content: flex-start;
+      width: 45vw;
+      min-height: 60vh;
+      .wrapper-two {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 30vw;
+        min-height: 30vh;
+        h3 {
+         color: rgba(179, 179, 54, 1);
+         font-family: 'Fira Sans Extra Condensed', sans-serif;
+         font-size: 1.25rem;
+         margin: 0 0 0 4rem;
+        } 
+        .line {
+          color: rgba(255, 255, 255, 1);
+          font-family: 'Titillium Web', sans-serif;
+          font-weight: 400;
+          font-size: 1rem;
+          padding:0 0 0 2rem;
+          margin-left: 2rem;
+          border-left: 3px solid rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  }
+

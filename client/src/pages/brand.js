@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import AlbumContainer from '../components/albumContainer.js';
 import { getAllAlbums } from '../lib/fetch-albums.js';
+import logo from '../assets/logos/samsung.png';
 
-const Home = () => {
+const Brand = () => {
   const [albums, setAlbums] = useState([]);
 
   const fetchAllAlbums = async () => {
@@ -16,7 +16,33 @@ const Home = () => {
 
   return (
     <>
-      <main className="container-home">
+    <main className="container-brand">
+    <section className="left">
+      <div className="wrapper-one">
+        <article>
+          <div className="brand">
+            <h4>SAMSUNG</h4>
+            <p>1262 devices</p>
+          </div>
+          <img src={logo} alt="brand logo" className="logos" />
+        </article>
+      </div>
+    </section>
+    <section class="right">
+      <div class="wrapper-two">
+       <h3>SELECT YOUR PHONE AND CHECK INFORMATION</h3>
+       <p class="line">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aliquid obcaecati repudiandae assumenda, ipsam ipsum illum, vel sapiente non perspiciatis dolorum numquam magni earum veniam eligendi quis ipsa, quod accusamus!
+       </p> 
+      </div>
+    </section>
+  </main>
+
+    </>
+  );
+};
+export default Brand;
+
+{/*       <main className="container-home">
         <div className="left">
           <h4>CHOOSE ALBUMS TO START YOUR FAVOURITE COLLECTION:</h4>
         </div>
@@ -29,9 +55,6 @@ const Home = () => {
             &gt;
           </a>
         </div>
-      </main>
-    </>
-  );
-};
-export default Home;
-
+      </main>;
+ */}
+ 
