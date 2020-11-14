@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getAlbumsByIds } from '../lib/fetch-albums.js';
 import { useLocalStorage } from '../lib/local-storage-hook.js';
 
-const Collection = () => {
+const Review = () => {
   const [collection, _setCollection] = useLocalStorage('userCollection', []);
   const [albums, setAlbums] = useState([]);
   const [isClicked, setisClicked] = useState(false);
@@ -26,8 +26,16 @@ const Collection = () => {
   }, []);
 
   return (
-    <main className="container-collection">
-      <div className="left">
+    <>
+    <main className="container-review">
+    </main>
+      </>
+  );
+};
+
+export default Review;
+
+/*     <div className="left">
         <h3>USER:</h3>
         <h4>Username</h4>
       </div>
@@ -74,9 +82,4 @@ const Collection = () => {
           </section>
         )}
       </section>
-      <div className="right"></div>
-    </main>
-  );
-};
-
-export default Collection;
+      <div className="right"></div> */

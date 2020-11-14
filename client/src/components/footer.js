@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer>
-      <p>&copy; SEI - ES 01 AR IS JEFF 2020</p>
+      <p>CREATED BY AR IS JEFF GROUP GA SEI-01-ES</p>
     </footer>
   );
 };

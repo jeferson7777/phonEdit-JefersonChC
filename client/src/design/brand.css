@@ -7,7 +7,7 @@
 
 body {
   font-size: 100%;
-  background-image: url(../assets/backgrounds/back1.png);
+  background-image: url(../assets/backgrounds/back_violet.png);
   color: white;
 
 }
@@ -26,7 +26,6 @@ header {
   align-items: center;
   margin: 0;
   padding-top: 5vh;
-
 }
 h1 {
   font-family: 'Open Sans', sans-serif;
