@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@100;300;400;500;700&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:wght@300;400;600;700&family=Titillium+Web:wght@200;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+/* para que tome el width desde el borde de la caja.*/
+
+body {
+  font-size: 100%;
+  background-image: url(../assets/backgrounds/back1.png);
+  color: white;
+
+}
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+picture {
+  display: block;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding-top: 5vh;
+
+}
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 0;
+}
+h1 a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+}
+.title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(179, 179, 54, 0.7);
+  width: 20vw;
+  border-radius: 5px;
+}
+nav ul li {
+  display: flex;
+  margin-left: 1vw;
+}
+nav ul li a {
+  color:rgba(255, 255, 255, 1);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.container {
+  width: 90vw;
+  min-height: 82vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0 auto;
+}
+.left{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 45vw;
+  height: 60vh;
+  background-color: rgba(179, 179, 54, 1);
+  border-radius: 0.3rem;
+}
+.wrapper-one {
+  display: flex;
+  flex-direction: column;
+  min-width: 40vw;
+  min-height: 50vh;
+  margin: 0 auto;
+  border-radius: 0.3rem;
+  margin-top: 1.5rem;
+}
+article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 40vw;
+  max-height: 10vh;
+  background-color:rgba(209, 209, 134, 1);
+  margin: 0 auto;
+  border-radius: 0.3rem;
+  margin-top: 0.8rem;
+}
+article h4{
+  color: rgba(128, 130, 133, 1);
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 2rem;
+  padding: 0 0.5rem;
+  padding-top: 1rem;
+}
+article p {
+  color:  rgba(0, 0, 49, 1);
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-size: 0.80rem;
+  margin: 0 2rem;
+  padding: 0.5rem 0.5rem 1rem;
+
+}
+.logos {
+  max-width: 5vw;
+  padding: 1rem;
+}
+.right{
+  display: flex;
+  justify-content: flex-start;
+  width: 45vw;
+  min-height: 60vh;
+}
+.wrapper-two {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 30vw;
+  min-height: 30vh;
+}
+ h3 {
+  color: rgba(179, 179, 54, 1);
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-size: 1.25rem;
+  margin: 0 0 0 4rem;
+} 
+ .line {
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  padding:0 0 0 2rem;
+  margin-left: 2rem;
+  border-left: 3px solid rgba(255, 255, 255, 1);
+}
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 5vh;
+  background-color: rgba(128, 130, 133, 1);
+}
+footer p {
+  color:  rgba(0, 0, 49, 1);
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 0.75rem;
+  margin-right: 2rem;
+}
