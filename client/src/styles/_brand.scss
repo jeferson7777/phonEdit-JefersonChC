@@ -15,15 +15,16 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
-      width: 45vw;
-      height: 60vh;
+      max-width: 50vw;
+      max-height: 80vh;
       background-color: rgba(179, 179, 54, 1);
       border-radius: 0.3rem;
       margin-left: 3vw;
       .wrapper-one {
         display: flex;
-        flex-direction: column;
-        min-width: 40vw;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 40vw;
         min-height: 50vh;
         margin: 0 auto;
         border-radius: 0.3rem;
@@ -33,7 +34,7 @@
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
-          min-width: 40vw;
+          min-width: 20vw;
           max-height: 10vh;
           background-color:rgba(209, 209, 134, 1);
           margin: 0 auto;

@@ -6,13 +6,17 @@ header {
   margin: 0;
   padding-top: 5vh;
   position: fixed;
-    h1 {
+    .lead {
+    text-decoration: none;
+      h1 {
     font-family: 'Open Sans', sans-serif;
     font-size: 3rem;
     font-weight: 300;
     color: rgba(255, 255, 255, 1);
     margin-left: 48vw;
-      span {
+    text-decoration: none;
+      }
+      .title {
         text-decoration: none;
         color: rgba(255, 255, 255, 1);
         font-weight: bold;

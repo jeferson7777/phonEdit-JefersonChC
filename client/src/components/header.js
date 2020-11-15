@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 const Header = () => {
   return (
     <header>
-      <Link to="/">
+      <Link to="/" className="lead">
         <h1>PHON<span className="title">EDIT</span></h1>
       </Link>
       <nav>
@@ -16,7 +16,7 @@ const Header = () => {
           </li>
           <li>
             <Link to="/blog" className="links">
-             BLOG
+              BLOG
             </Link>
           </li>
         </ul>
