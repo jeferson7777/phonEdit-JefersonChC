@@ -1,4 +1,4 @@
-const { REACT_APP_SERVER_URL } = process.env;
+//const { REACT_APP_SERVER_URL } = process.env;
 
 // we get all brands and device number property
 export const getAllBrands = async () => {
