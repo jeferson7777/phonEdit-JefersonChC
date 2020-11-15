@@ -1,9 +1,12 @@
 //const { REACT_APP_SERVER_URL } = process.env;
+const REACT_APP_SERVER_URL = "http://localhost:5000";
 
 // we get all brands and device number property
 export const getAllBrands = async () => {
   const response = await fetch(`${REACT_APP_SERVER_URL}/brand`);
-  return await response.json();
+  const data = await response.json();
+  const { name, devices } = data;
+  return data;
 };
 
 //  we get an specific brand and all its models.

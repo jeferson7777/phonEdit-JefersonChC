@@ -1,4 +1,4 @@
-const playlist = [
+const phones = [
   {
     userName: 'Ismael',
     favoriteTracks: [
