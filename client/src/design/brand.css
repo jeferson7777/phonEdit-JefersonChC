@@ -8,8 +8,6 @@
 body {
   font-size: 100%;
   background-image: url(../assets/backgrounds/back_violet.png);
-  color: white;
-
 }
 img {
   display: block;
@@ -120,6 +118,7 @@ article p {
 }
 .right{
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   width: 45vw;
   min-height: 60vh;
@@ -129,7 +128,7 @@ article p {
   flex-direction: column;
   align-items: flex-start;
   max-width: 30vw;
-  min-height: 30vh;
+  min-height: 20vh;
 }
  h3 {
   color: rgba(179, 179, 54, 1);
@@ -146,6 +145,45 @@ article p {
   margin-left: 2rem;
   border-left: 3px solid rgba(255, 255, 255, 1);
 }
+.wrapper-three {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 50vw;
+}
+.wrapper-titles {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  align-self: center;
+  max-width: 20vw;
+}
+.brand-name {
+  color:rgba(255, 255, 255, 1);
+  padding:0 0 0 2rem;
+  border-left: 3px solid rgba(255, 255, 255, 1);
+  margin:1rem 2rem 0;
+}
+.brand-sub {
+  color: rgba(128, 130, 133, 1);
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  padding:0 0 0 2rem;
+  margin-left: 2rem;
+
+}
+.phone-item {
+ color: rgba(179, 179, 54, 1);
+ text-decoration: none;
+ font-family: 'Fira Sans Extra Condensed', sans-serif;
+ font-size: 1rem;
+ margin: 0 0 0 4rem;
+ padding-bottom: 0.5rem;
+ border-bottom: 1px solid rgba(255, 255, 255, 1);
+
+}
+
 footer {
   display: flex;
   justify-content: flex-end;
