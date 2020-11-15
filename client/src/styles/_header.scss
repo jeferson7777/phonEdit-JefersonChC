@@ -3,17 +3,17 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding-top: 5vh;
   position: fixed;
     .lead {
+      margin-top: 0;
+
     text-decoration: none;
-      h1 {
+    h1 {
     font-family: 'Open Sans', sans-serif;
     font-size: 3rem;
     font-weight: 300;
     color: rgba(255, 255, 255, 1);
-    margin-left: 48vw;
+    margin-left: 58vw;
     text-decoration: none;
       }
       .title {
@@ -23,12 +23,16 @@ header {
       }
     }
     nav {
+      margin: 0;
+      padding: 0rem;
       ul {
         display: flex;
         justify-content: flex-end;
+        align-items: flex-start;
         background-color: rgba(179, 179, 54, 0.7);
         min-width: 20vw;
         border-radius: 5px;
+
       }
         li {
           display: flex;
