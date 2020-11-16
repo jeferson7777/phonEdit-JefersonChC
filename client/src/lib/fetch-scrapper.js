@@ -37,5 +37,7 @@ export const getPhonesBySearchQuery = async (id) => {
 
 export const getPhoneDetails = async (id) => {
   const response = await fetch(`${REACT_APP_SERVER_URL}/details/${id}`);
-  return await response.json();
+  const data = await response.json();
+  const { title, img, img_url, quick_spec } = data;
+  return data;
 };

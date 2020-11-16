@@ -1,6 +1,4 @@
-import React from 'react';
-
-const BrandsContainer = ({ brands, handleBrandOnClick }) => {
+const PhoneContainer = ({ phone, handlePhoneOnClick }) => {
   return (
     <>
       <div className="wrapper-one">
@@ -28,4 +26,4 @@ const BrandsContainer = ({ brands, handleBrandOnClick }) => {
     </>
   );
 };
-export default BrandsContainer;
+export default PhoneContainer;
