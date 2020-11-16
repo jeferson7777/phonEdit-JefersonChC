@@ -7,17 +7,17 @@
     align-items: flex-start;
     margin: 0 auto;
     background-image: url(../assets/backgrounds/back_violet.png);
-    background-size: contain;
-    background-repeat: repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     .left{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
-      max-width: 60vw;
+      max-width: 50vw;
       min-height: 70vh;
-      background-color: rgba(179, 179, 54, 0.7);
+      //background-color: rgba(179, 179, 54, 0.7);
       border-radius: 0.3rem;
       margin-left: 3vw;
       margin-top: 20vh;
@@ -32,7 +32,8 @@
         border-radius: 0.3rem;
         margin-top: 1rem;
         padding: 0.5rem;
-        article {
+
+        .one-brand {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
@@ -40,12 +41,13 @@
           min-width: 15vw;
           max-width: 30vw;
           max-height: 10vh;
-          background-color:rgba(209, 209, 134, 1);
+          background-color: rgba(179, 179, 54, 1);;
           margin: 0 auto;
           border-radius: 0.3rem;
           margin-top: 0.8rem;
+          text-decoration: none;
           h4{
-            color: rgba(128, 130, 133, 1);
+            color: rgba(255, 255, 255, 1);
             font-family: 'Open Sans', sans-serif;
             margin: 0 2rem;
             padding: 0 0.5rem;
@@ -69,18 +71,17 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      width: 45vw;
+      align-items: flex-start;
+      min-width: 40vw;
+      max-width: 45vw;
       min-height: 70vh;
       margin-top: 20vh;
-      margin-left: 55vw;
-      position: fixed;
-
       .wrapper-two {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         align-items: flex-start;
         max-width: 30vw;
-        min-height: 30vh;
         h3 {
          color: rgba(179, 179, 54, 1);
          font-family: 'Fira Sans Extra Condensed', sans-serif;
@@ -95,6 +96,67 @@
           padding:0 0 0 2rem;
           margin-left: 2rem;
           border-left: 3px solid rgba(255, 255, 255, 1);
+        }
+      }
+      .wrapper-three {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        max-width: 45vw;
+        padding: 1rem;
+        margin-right: 2rem;
+        .wrapper-titles {
+          display: flex;
+          flex-direction: column;
+          justify-items: flex-start;
+          align-self: flex-start;
+          max-width: 20vw;
+          margin-right: 3rem;
+          .brand-name {
+            color:rgba(255, 255, 255, 1);
+            padding:0 0 0 2rem;
+            border-left: 3px solid rgba(255, 255, 255, 1);
+            margin:1rem 1rem 0;
+          }
+          .brand-sub {
+            color: rgba(128, 130, 133, 1);
+            font-family: 'Fira Sans Extra Condensed', sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            margin-left: 3rem;
+          }
+        }
+        .wrapper-phone-items {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          .item-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 1rem;
+            min-width: 40vw;
+
+
+            .phone-item {
+            color: rgba(179, 179, 54, 1);
+            text-decoration: none;
+            font-family: 'Fira Sans Extra Condensed', sans-serif;
+            font-size: 1rem;
+            margin-right: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 1);
+            }
+            .phonepict {
+              max-width: 4vw;
+              border-radius: 10px;
+             //margin: 2rem 1rem 0 0;
+
+            }
+          }
         }
       }
     }
