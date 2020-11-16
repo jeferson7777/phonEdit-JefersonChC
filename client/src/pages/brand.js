@@ -1,15 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import BrandsContainer from '../components/brands-container.js';
 import PhoneListByBrand from '../components/one-brand-list.js';
-
+import { getAllBrands } from '../lib/fetch-scrapper.js';
 
 const Brand = () => {
+  const [brands, setBrands] = useState([]);
+  const [phonesByBrandId, setPhonesByBrandId] = useState(undefined);
+
+  const fetchAllBrands = async () => {
+    const brandsData = await getAllBrands();
+    setBrands(brandsData);
+  };
+
+  useEffect(() => {
+    fetchAllBrands();
+  }, []);
+
+  const handleBrandOnClick = (event) => {
+    event.preventDefault();
+    const element = event.currentTarget;
+    const id = element.getAttribute('href');
+    setPhonesByBrandId(id);
+  };
 
   return (
     <>
       <main className="container-brand">
         <section className="left">
-          <BrandsContainer />
+          <BrandsContainer
+            brands={brands}
+            handleBrandOnClick={handleBrandOnClick}
+          />
         </section>
         <section className="right">
           <div className="wrapper-two">
@@ -21,12 +42,10 @@ const Brand = () => {
               eligendi quis ipsa, quod accusamus!
             </p>
           </div>
-          <PhoneListByBrand />
+          {phonesByBrandId && <PhoneListByBrand id={phonesByBrandId} />}
         </section>
       </main>
     </>
   );
 };
 export default Brand;
-
- 
