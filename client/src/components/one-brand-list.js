@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useReducer } from 'react';
 import { getOneBrandById } from '../lib/fetch-scrapper.js';
 
 const PhoneListByBrand = ({ id }) => {
@@ -6,13 +6,12 @@ const PhoneListByBrand = ({ id }) => {
 
   const fetchPhonesByBrand = async (id) => {
     const phonesByBrandData = await getOneBrandById(id);
-    console.log(phonesByBrandData);
     setphonesByBrand(phonesByBrandData);
   };
 
   useEffect(() => {
     fetchPhonesByBrand(id);
-  }, []);
+  }, [id]);
 
   return (
     <>
@@ -25,21 +24,22 @@ const PhoneListByBrand = ({ id }) => {
           </p>
         </div>
         <div className="wrapper-phone-items">
-          {phonesByBrand.map((phone) => {
-            console.log(phone);
-            return (
-              <div>
-                <h4>
-                  <a href="./" key={phone._id} className="phone-item">
-                    {phone.name}
-                  </a>
-                </h4>
-                <div key={phone.img} className="phonepict">
-                  {phone.img}
+          {phonesByBrand &&
+            phonesByBrand.map((phone) => {
+              // console.log(phone);
+              return (
+                <div>
+                  <h4>
+                    <a href="./" key={phone._id} className="phone-item">
+                      {phone.name}
+                    </a>
+                  </h4>
+                  <div key={phone.img} className="phonepict">
+                    {phone.img}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
         </div>
       </div>
     </>

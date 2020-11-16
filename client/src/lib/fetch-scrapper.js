@@ -1,5 +1,5 @@
 //const { REACT_APP_SERVER_URL } = process.env;
-const REACT_APP_SERVER_URL = "http://localhost:5000";
+const REACT_APP_SERVER_URL = 'http://localhost:5000';
 
 // we get all brands and device number property
 export const getAllBrands = async () => {
@@ -13,8 +13,7 @@ export const getAllBrands = async () => {
 export const getOneBrandById = async (id) => {
   const response = await fetch(`${REACT_APP_SERVER_URL}/brand/${id}`);
   const data = await response.json();
-  console.log(data);
-  const { data:  name } = data;
+  const { data: name } = data;
   return name;
 };
 
@@ -29,7 +28,6 @@ export const getOneBrandById = async (id) => {
 //     return [];
 //   }
 // };
-
 
 // this route returning us a specific phone model.
 export const getPhonesBySearchQuery = async (id) => {
