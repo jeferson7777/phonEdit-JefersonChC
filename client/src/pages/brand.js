@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-// import BrandsContainer from '../components/brands-container.js';
+import BrandsContainer from '../components/brands-container.js';
 import PhoneListByBrand from '../components/one-brand-list.js';
 import { getAllBrands } from '../lib/fetch-scrapper.js';
 
@@ -27,8 +27,11 @@ const Brand = () => {
     <>
       <main className="container-brand">
         <section className="left">
-          {/* <BrandsContainer /> */}
-          <div className="wrapper-one">
+          <BrandsContainer
+            brands={brands}
+            handleBrandOnClick={handleBrandOnClick}
+          />
+          {/* <div className="wrapper-one">
             {brands.map((brand) => {
               // console.log(brand);
               return (
@@ -50,7 +53,7 @@ const Brand = () => {
                 </a>
               );
             })}
-          </div>
+          </div> */}
         </section>
         <section className="right">
           <div className="wrapper-two">

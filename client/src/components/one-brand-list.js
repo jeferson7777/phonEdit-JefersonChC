@@ -26,7 +26,6 @@ const PhoneListByBrand = ({ id }) => {
         <div className="wrapper-phone-items">
           {phonesByBrand &&
             phonesByBrand.map((phone) => {
-              // console.log(phone);
               return (
                 <div>
                   <h4>
