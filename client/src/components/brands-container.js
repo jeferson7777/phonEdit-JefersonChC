@@ -1,26 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { getAllBrands } from '../lib/fetch-scrapper.js';
+import React from 'react';
 
 const BrandsContainer = ({ brands, handleBrandOnClick }) => {
-  // const [brands, setBrands] = useState([]);
-
-  // const fetchAllBrands = async () => {
-  //   const brandsData = await getAllBrands();
-  //   console.log(brandsData);
-  //   setBrands(brandsData);
-  // };
-
-  // useEffect(() => {
-  //   fetchAllBrands();
-  // }, []);
-
-  /*     const handleClick = (event) => {
-    event.preventDefault();
-    const data = await getAllBrands();
-    setBrands(data);
-  };
- */
-
   return (
     <>
       <div className="wrapper-one">

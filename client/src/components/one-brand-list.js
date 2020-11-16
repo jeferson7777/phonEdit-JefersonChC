@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useReducer } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getOneBrandById } from '../lib/fetch-scrapper.js';
 
 const PhoneListByBrand = ({ id }) => {
@@ -27,14 +27,14 @@ const PhoneListByBrand = ({ id }) => {
           {phonesByBrand &&
             phonesByBrand.map((phone) => {
               return (
-                <div>
+                <div key={phone.name}>
                   <h4>
                     <a href="./" key={phone._id} className="phone-item">
                       {phone.name}
                     </a>
                   </h4>
                   <div key={phone.img} className="phonepict">
-                    {phone.img}
+                    <img src={phone.img} alt={phone.name} />
                   </div>
                 </div>
               );
