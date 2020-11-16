@@ -1,32 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { getOneBrandById } from '../lib/fetch-scrapper.js';
 
-const PhoneListByBrand = () => {
+const PhoneListByBrand = ({ id }) => {
   const [phonesByBrand, setphonesByBrand] = useState([]);
 
   const fetchPhonesByBrand = async (id) => {
-    const phonesByBrandData = await getOneBrandById({id});
+    const phonesByBrandData = await getOneBrandById(id);
     console.log(phonesByBrandData);
-    setphonesByBrand( phonesByBrandData );
+    setphonesByBrand(phonesByBrandData);
   };
 
   useEffect(() => {
-    fetchPhonesByBrand();
+    fetchPhonesByBrand(id);
   }, []);
-
-  /*     const handleClick = (event) => {
-    event.preventDefault();
-    const data = await getAllBrands();
-    setBrands(data);
-  };
- */
 
   return (
     <>
       <div className="wrapper-three">
         <div className="wrapper-titles">
-{/*           <h3 className="brand-name"> {`${brand.name}  PHONES`}</h3>
- */}          <p className="brand-sub">
+          {/*           <h3 className="brand-name"> {`${brand.name}  PHONES`}</h3>
+           */}{' '}
+          <p className="brand-sub">
             Select the specific model you are looking for:
           </p>
         </div>

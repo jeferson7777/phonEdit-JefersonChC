@@ -5,17 +5,23 @@ import { getAllBrands } from '../lib/fetch-scrapper.js';
 
 const Brand = () => {
   const [brands, setBrands] = useState([]);
-  const [phonesByBrand, setphonesByBrand] = useState([]);
+  const [phonesByBrandId, setPhonesByBrandId] = useState(undefined);
 
   const fetchAllBrands = async () => {
     const brandsData = await getAllBrands();
-    console.log(brandsData);
     setBrands(brandsData);
   };
 
   useEffect(() => {
     fetchAllBrands();
   }, []);
+
+  const handleBrandOnClick = (event) => {
+    event.preventDefault();
+    const element = event.currentTarget;
+    const id = element.getAttribute('href');
+    setPhonesByBrandId(id);
+  };
 
   return (
     <>
@@ -24,18 +30,24 @@ const Brand = () => {
           {/* <BrandsContainer /> */}
           <div className="wrapper-one">
             {brands.map((brand) => {
-              console.log(brand);
+              // console.log(brand);
               return (
-                <article
-                  key={brand._id}
-                  // onClick={handleClick}
-                  className="one-brand"
+                <a
+                  href={brand.url}
+                  key={brand.url}
+                  onClick={handleBrandOnClick}
                 >
-                  <div className="brand">
-                    <h4 className="one-brand-name">{brand.name}</h4>
-                    <p className="one-brand-devices">{`${brand.devices} devices`}</p>
-                  </div>
-                </article>
+                  <article
+                    key={brand._id}
+                    // onClick={handleClick}
+                    className="one-brand"
+                  >
+                    <div className="brand">
+                      <h4 className="one-brand-name">{brand.name}</h4>
+                      <p className="one-brand-devices">{`${brand.devices} devices`}</p>
+                    </div>
+                  </article>
+                </a>
               );
             })}
           </div>
@@ -50,35 +62,7 @@ const Brand = () => {
               eligendi quis ipsa, quod accusamus!
             </p>
           </div>
-          {/* <PhoneListByBrand /> */}
-          <>
-            <div className="wrapper-three">
-              <div className="wrapper-titles">
-                {/*           <h3 className="brand-name"> {`${brand.name}  PHONES`}</h3>
-                 */}{' '}
-                <p className="brand-sub">
-                  Select the specific model you are looking for:
-                </p>
-              </div>
-              <div className="wrapper-phone-items">
-                {phonesByBrand.map((phone, i) => {
-                  // console.log(phone);
-                  return (
-                    <div key={i}>
-                      <h4>
-                        <a href="./" key={phone._id} className="phone-item">
-                          {phone.name}
-                        </a>
-                      </h4>
-                      <div key={phone.img} className="phonepict">
-                        {phone.img}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </>
+          {phonesByBrandId && <PhoneListByBrand id={phonesByBrandId} />}
         </section>
       </main>
     </>
