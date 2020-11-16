@@ -1,2 +1,2 @@
-const collection = [{}];
-export default collection;
+const reviews = [{}];
+export default reviews;

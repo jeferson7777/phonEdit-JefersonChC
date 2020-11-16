@@ -1,9 +1,9 @@
 const reviews = [
   {
+    userName: "ismaelai",
     brand: 'Samsung',
     phoneModel: 'Note 8',
     reviewTitle: 'Note 8 is good price for value',
-    userName: 'ismaelai',
     description:
       "It's the best phone ever since you spend a lot of money on it. You can take incredible pictures even at night. Also your kids would be able to play tons of games all day",
     pictures: [],

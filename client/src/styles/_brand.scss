@@ -4,37 +4,41 @@
     min-height: 95vh;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
     margin: 0 auto;
     background-image: url(../assets/backgrounds/back_violet.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: repeat;
     background-position: center;
     .left{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
-      max-width: 50vw;
-      max-height: 80vh;
-      background-color: rgba(179, 179, 54, 1);
+      max-width: 60vw;
+      min-height: 70vh;
+      background-color: rgba(179, 179, 54, 0.7);
       border-radius: 0.3rem;
       margin-left: 3vw;
+      margin-top: 20vh;
+      margin-bottom: 1vh;
       .wrapper-one {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        max-width: 40vw;
-        min-height: 50vh;
+        max-width: 50vw;
+        //min-height: 50vh;
         margin: 0 auto;
         border-radius: 0.3rem;
-        margin-top: 1.5rem;
+        margin-top: 1rem;
+        padding: 0.5rem;
         article {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
-          min-width: 20vw;
+          min-width: 15vw;
+          max-width: 30vw;
           max-height: 10vh;
           background-color:rgba(209, 209, 134, 1);
           margin: 0 auto;
@@ -63,9 +67,14 @@
     }
     .right{
       display: flex;
+      flex-direction: column;
       justify-content: flex-start;
       width: 45vw;
-      min-height: 60vh;
+      min-height: 70vh;
+      margin-top: 20vh;
+      margin-left: 55vw;
+      position: fixed;
+
       .wrapper-two {
         display: flex;
         flex-direction: column;

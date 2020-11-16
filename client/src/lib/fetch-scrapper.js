@@ -12,7 +12,10 @@ export const getAllBrands = async () => {
 //  we get an specific brand and all its models.
 export const getOneBrandById = async (id) => {
   const response = await fetch(`${REACT_APP_SERVER_URL}/brand/${id}`);
-  return await response.json();
+  const data = await response.json();
+  console.log(data);
+  const { data:  name } = data;
+  return name;
 };
 
 // export const getAlbumsByIds = async (albumsIds) => {
