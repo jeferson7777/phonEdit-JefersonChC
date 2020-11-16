@@ -2,17 +2,12 @@ import fetch from 'node-fetch';
 import cheerio from 'cheerio';
 import mongoose from 'mongoose';
 
-
 const BASE_URL = 'https://www.gsmarena.com';
 
-const brandSchema = new mongoose.Schema(
-  {
-    name: String,
-    devices: String,
-  },
-
-
-);
+const brandSchema = new mongoose.Schema({
+  name: String,
+  devices: String,
+});
 
 const Brands = mongoose.model('brand', brandSchema);
 export default Brands;
@@ -32,7 +27,7 @@ export const getAllBrands = async () => {
           .replace(' devices', '')
           .replace(/[0-9]/g, ''),
         devices: $(el).find('span').text().replace(' devices', ''),
-        // url: $(el).find('a').attr('href'),
+        url: $(el).find('a').attr('href'),
       };
       json.push(brand);
     });
