@@ -5,7 +5,7 @@ Modal.setAppElement('#root');
 
 const PhoneContainer = ({ modalIsOpen, closeModal, phoneDetail }) => {
   return (
-    <Modal isOpen={modalIsOpen} onRequestClose={closeModal}>
+    <Modal isOpen={modalIsOpen} onRequestClose={closeModal} className="modal">
       {modalIsOpen && (
         <>
           <button onClick={closeModal}>Close</button>
