@@ -9,7 +9,7 @@ const brandSchema = new mongoose.Schema({
   devices: String,
 });
 
-const Brands = mongoose.model('brand', brandSchema);
+const Brands = mongoose.model('brand', brandSchema); 
 export default Brands;
 
 export const getAllBrands = async () => {
