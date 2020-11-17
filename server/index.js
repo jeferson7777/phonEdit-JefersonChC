@@ -5,8 +5,8 @@ import logger from './lib/logger.js';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
-export const databaseURI = 'mongodb://localhost/phone-edit';
-mongoose.connect(databaseURI, {
+export const DATABASE_URI = 'mongodb://localhost/phone-edit';
+mongoose.connect(process.env.DATABASE_URI, {
   useFindAndModify: false,
   useNewUrlParser: true,
   useUnifiedTopology: true,
