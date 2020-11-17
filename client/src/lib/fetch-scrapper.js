@@ -1,5 +1,5 @@
-//const { REACT_APP_SERVER_URL } = process.env;
-const REACT_APP_SERVER_URL = 'http://localhost:5000';
+const { REACT_APP_SERVER_URL } = process.env;
+//const REACT_APP_SERVER_URL = 'http://localhost:5000';
 
 // we get all brands and device number property
 export const getAllBrands = async () => {

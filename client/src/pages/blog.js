@@ -1,25 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { getAlbumsByIds } from '../lib/fetch-albums.js';
-import { useLocalStorage } from '../lib/local-storage-hook.js';
 
   const Blog = () => {
-  const [collection, _setCollection] = useLocalStorage('userCollection', []);
-  const [albums, setAlbums] = useState([]);
 
-  const fetchAlbums = async () => {
-    const albumsData = await getAlbumsByIds(collection);
-    setAlbums(albumsData);
-  };
-
-  const handleClick = (event) => {
-     event.preventDefault();
-     const index = albums.findIndex((x) => x.name === event.target.innerHTML);
-     console.log(index)
-   };
-
-  useEffect(() => {
-    fetchAlbums();
-  }, []);
 
   return (
     <main className="container-blog">

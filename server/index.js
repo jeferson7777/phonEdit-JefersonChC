@@ -5,8 +5,8 @@ import logger from './lib/logger.js';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
-export const databaseURI = 'mongodb://localhost/phone-edit';
-mongoose.connect(databaseURI, {
+export const DATABASE_URI = 'mongodb://localhost/phone-edit';
+mongoose.connect(process.env.DATABASE_URI, {
   useFindAndModify: false,
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -21,7 +21,8 @@ import loggerMiddleware from './middleware/logger-middleware.js';
 import brandRouter from './routes/brand.js';
 import phoneRouter from './routes/phone.js';
 
-const PORT = 5000;
+dotenv.config();
+const PORT = process.env.PORT;
 const server = express();
 
 server.use(bodyParser.json());
@@ -33,4 +34,6 @@ server.use(loggerMiddleware);
 server.use(brandRouter);
 server.use(phoneRouter);
 
-server.listen(PORT, () => logger.info(`Server running on port ${PORT} 📡`));
+server.listen(process.env.PORT, () =>
+  logger.info(`Server running on port ${process.env.PORT} 📡`),
+);
