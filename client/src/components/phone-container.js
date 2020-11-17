@@ -1,29 +1,34 @@
-const PhoneContainer = ({ phone, handlePhoneOnClick }) => {
+import React from 'react';
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root');
+
+const PhoneContainer = ({ modalIsOpen, closeModal, phoneDetail }) => {
   return (
-    <>
-      <div className="wrapper-one">
-        {brands.map((brand) => {
-          return (
-            <a
-              href={brand.url}
-              key={brand.url}
-              onClick={handleBrandOnClick}
-              className="one-brand"
-            >
-              <article
-                key={brand._id}
-                // onClick={handleClick}
-              >
-                <div className="brand">
-                  <h4 className="one-brand-name">{brand.name}</h4>
-                  <p className="one-brand-devices">{`${brand.devices} devices`}</p>
-                </div>
-              </article>
-            </a>
-          );
-        })}
-      </div>
-    </>
+    <Modal isOpen={modalIsOpen} onRequestClose={closeModal} className="modal">
+      {modalIsOpen && (
+        <>
+          <button onClick={closeModal}>Close</button>
+          <section>
+            <picture>
+              <img src={phoneDetail.img} alt={phoneDetail.title} />
+            </picture>
+            <h3>{phoneDetail.title}</h3>
+            <dl>
+              {Object.entries(phoneDetail.quick_spec).map(([key, value]) => {
+                const formattedKey = key.replace('_', ' ');
+                return (
+                  <div key={key}>
+                    <dt>{formattedKey}</dt>
+                    <dd>{value}</dd>
+                  </div>
+                );
+              })}
+            </dl>
+          </section>
+        </>
+      )}
+    </Modal>
   );
 };
 export default PhoneContainer;
