@@ -14,7 +14,6 @@ const BrandsContainer = ({ brands, handleBrandOnClick }) => {
             >
               <article
                 key={brand._id}
-                // onClick={handleClick}
               >
                 <div className="brand">
                   <h4 className="one-brand-name">{brand.name}</h4>
